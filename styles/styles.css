@@ -1,12 +1,20 @@
-@font-face {font-family: Canter; src: url('styles/fonts/Canter-Light.otf');}
-@font-face {font-family: Canter; font-weight: bold; src: url('styles/fonts/Canter-Bold.otf');}
-@font-face {font-family: Canter; font-weight: 800; src: url('styles/fonts/Canter-Bold-3D.otf');}
 @font-face {font-family: Chelsea; src: url('styles/fonts/Chelsea-IV.ttf');}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
 
 body {
   color: #1B1B1E;
   font-size: 16px;
   font-family: 'Saira Semi Condensed', sans-serif;
+  font-weight: 400;
+
 }
 
 h1 {
@@ -36,15 +44,18 @@ nav {
 
 h2 {
   font-size: 1.5em;
-  margin-top: 0;
+  margin: 0;
+  padding: 20px 15px 10px;
 }
 
 h3 {
   font-size: 1.125em;
+  margin: 0;
 }
 
 p {
   font-size: 1em;
+  margin: 0;
 }
 
 header {
@@ -53,6 +64,7 @@ header {
 
 a {
   text-decoration: none;
+  font-weight: 400;
 }
 
 main {
@@ -62,6 +74,7 @@ main {
 .p-header {
   margin: 5px auto 15px;
 }
+
 
 .bg-light-gray {
   background-color: #D5DCE0;
@@ -74,14 +87,6 @@ main {
 .bg-white {
   background-color: #FFFFFF;
 }
-
-/*.bg-pastel-blue {
-  background-color: #A9BCD0;
-}
-
-.pastel-blue {
-  color: #A9BCD0;
-}*/
 
 .green {
   color: #58A4B0;
@@ -98,3 +103,100 @@ main {
 .black {
   color: #1B1B1E;
 }
+
+.cards-section {
+  height: 100vh;
+}
+
+.card {
+  height: 60vh;
+  margin: 3%;
+}
+
+.card-top {
+  /*background-color: magenta;*/
+  /*background-image: url('../images/hipster1.jpg');*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-1 {
+  background-image: url('../images/hipster1.jpg');
+}
+
+.card-2 {
+  background-image: url('../images/hipster2.jpg');
+}
+
+.card-3 {
+  background-image: url('../images/hipster3.jpg');
+}
+
+.card-4 {
+  background-image: url('../images/hipster4.jpg');
+}
+
+.card-top-elements {
+  padding: 4% 5%;
+  text-align: center;
+}
+
+.icon-arrow {
+  height: 35%;
+}
+
+.card-bottom {
+  height: 65%;
+  padding: 3% 5%;
+}
+
+.card-bottom-elements {
+  margin: 3% 0;
+}
+
+.big-number {
+  font-size: 1.5em;
+}
+
+.link-box {
+  padding: 2%;
+}
+
+/*Media queries*/
+@media screen and (min-width: 650px) {
+  .cards-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5%;
+  }
+
+  .card {
+    flex: 1 44%;
+    margin: 1.5%;
+  }
+
+  .card-bottom-elements {
+  margin: 6% 0;
+}
+}
+
+@media screen and (min-width: 850px) {
+  .cards-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5%;
+  }
+
+  .card {
+    flex: 1 25%;
+    margin: 1.5%;
+  }
+}
+
