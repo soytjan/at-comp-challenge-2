@@ -1,0 +1,100 @@
+@font-face {font-family: Canter; src: url('styles/fonts/Canter-Light.otf');}
+@font-face {font-family: Canter; font-weight: bold; src: url('styles/fonts/Canter-Bold.otf');}
+@font-face {font-family: Canter; font-weight: 800; src: url('styles/fonts/Canter-Bold-3D.otf');}
+@font-face {font-family: Chelsea; src: url('styles/fonts/Chelsea-IV.ttf');}
+
+body {
+  color: #1B1B1E;
+  font-size: 16px;
+  font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-family: Chelsea;
+  letter-spacing: 0.1em;
+  margin: 15px auto 0;
+}
+
+.icon-logo {
+  display: block ;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px 15px 20px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.125em;
+}
+
+p {
+  font-size: 1em;
+}
+
+header {
+  color: #D5DCE0;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  height: 75vh;
+}
+
+.p-header {
+  margin: 5px auto 15px;
+}
+
+.bg-light-gray {
+  background-color: #D5DCE0;
+}
+
+.bg-black {
+  background-color: #1B1B1E;
+}
+
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+/*.bg-pastel-blue {
+  background-color: #A9BCD0;
+}
+
+.pastel-blue {
+  color: #A9BCD0;
+}*/
+
+.green {
+  color: #58A4B0;
+}
+
+.light-gray {
+  color: #D8DBE2;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.black {
+  color: #1B1B1E;
+}
