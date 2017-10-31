@@ -19,33 +19,15 @@ body {
 
 h1 {
   font-size: 2.5em;
-  font-family: Chelsea;
+  font-family: 'Chelsea', 'Saira Semi Condensed', sans-serif;
   letter-spacing: 0.1em;
   margin: 15px auto 0;
-}
-
-.icon-logo {
-  display: block ;
-}
-
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: space-around;
-}
-
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 15px 15px 20px;
 }
 
 h2 {
   font-size: 1.5em;
   margin: 0;
-  padding: 20px 15px 10px;
+  padding: 20px 2% 10px;
 }
 
 h3 {
@@ -58,23 +40,32 @@ p {
   margin: 0;
 }
 
+a {
+  font-weight: 400;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
 header {
   color: #D5DCE0;
 }
 
-a {
-  text-decoration: none;
-  font-weight: 400;
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px 15px 20px;
+}
+
+a:hover {
+  color: #FFFFFF;
 }
 
 main {
   height: 75vh;
 }
 
-.p-header {
-  margin: 5px auto 15px;
-}
-
+/*COLORS*/
 
 .bg-light-gray {
   background-color: #D5DCE0;
@@ -86,6 +77,10 @@ main {
 
 .bg-white {
   background-color: #FFFFFF;
+}
+
+.black {
+  color: #1B1B1E;
 }
 
 .green {
@@ -100,29 +95,31 @@ main {
   color: #FFFFFF;
 }
 
-.black {
-  color: #1B1B1E;
+/*HEADER and NAV section*/
+.icon-logo {
+  display: block ;
 }
 
-.cards-section {
-  height: 100vh;
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+}
+
+.p-header {
+  margin: 5px auto 15px;
+}
+
+/*CARDS SECTION*/
+.big-number {
+  font-size: 1.5em;
 }
 
 .card {
   height: 60vh;
-  margin: 3%;
-}
-
-.card-top {
-  /*background-color: magenta;*/
-  /*background-image: url('../images/hipster1.jpg');*/
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 35%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  margin: 2%;
+  box-shadow: 2px 0 4px #a6a6a6;
 }
 
 .card-1 {
@@ -141,13 +138,37 @@ main {
   background-image: url('../images/hipster4.jpg');
 }
 
-.card-top-elements {
-  padding: 4% 5%;
-  text-align: center;
+.card-5 {
+  background-image: url('../images/hipster5.jpg');
 }
 
-.icon-arrow {
+.card-6 {
+  background-image: url('../images/hipster6.jpg');
+}
+
+.card-7 {
+  background-image: url('../images/hipster9.jpg');
+}
+
+.card-8 {
+  background-image: url('../images/hipster8.jpg');
+}
+
+.card-top {
+  /*background-color: magenta;*/
+  /*background-image: url('../images/hipster1.jpg');*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-top-elements {
+  margin: 5% 5%;
+  text-align: center;
 }
 
 .card-bottom {
@@ -156,11 +177,17 @@ main {
 }
 
 .card-bottom-elements {
-  margin: 3% 0;
+  margin: 0 0 5%;
 }
 
-.big-number {
-  font-size: 1.5em;
+.cards-section {
+  height: 100vh;
+}
+
+.icon-arrow {
+  height: 50px;
+  width: 50px;
+  box-sizing: content-box;
 }
 
 .link-box {
@@ -168,35 +195,91 @@ main {
 }
 
 /*Media queries*/
-@media screen and (min-width: 650px) {
+/*How do I make sure the two cards at the bottom don't change?*/
+@media screen and (min-width: 440px) {
+  .card-bottom-elements {
+    margin: 0 0 6%;
+  }
+}
+
+@media screen and (min-width: 560px) {
   .cards-section {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding: 1.5%;
   }
 
   .card {
-    flex: 1 44%;
-    margin: 1.5%;
+    width: 48%;
+    margin: 1%;
   }
 
   .card-bottom-elements {
-  margin: 6% 0;
-}
+    margin: 4% 0 7%;
+  }
 }
 
-@media screen and (min-width: 850px) {
+/*How do I make sure the two cards at the bottom don't change?*/
+@media screen and (min-width: 800px) {
+   header {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 20px 25px;
+    width: 40%;
+  }
+
+  .logo-container {
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 12px;
+  }
+
   .cards-section {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 1.5%;
+    justify-content: flex-start;
+    padding: 1.5% 1% 1.5% 1.5%;
   }
 
   .card {
-    flex: 1 25%;
-    margin: 1.5%;
+    width: 32%;
+    margin: 0.5%;
+  }
+
+  .card-bottom-elements {
+    margin: 6% 0;
   }
 }
 
+@media screen and (min-width: 960px) {
+  nav {
+    width: 35%;
+  }
+
+  .card {
+    width: 24%;
+  }
+
+  .card-bottom-elements {
+    margin: 7% 0;
+  }
+
+  .cards-section {
+    justify-content: space-between;
+    padding: 1.5%;
+  }
+}
+
+@media screen and (min-width: 1190px) {
+  .card-bottom-elements {
+    margin: 3% 0 6%;
+  }
+}
